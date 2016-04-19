@@ -1,5 +1,6 @@
 [![License](https://poser.pugx.org/arodygin/php-dictionary/license)](https://packagist.org/packages/arodygin/php-dictionary)
 [![Latest Stable Version](https://poser.pugx.org/arodygin/php-dictionary/v/stable)](https://packagist.org/packages/arodygin/php-dictionary)
+[![Build Status](https://travis-ci.org/arodygin/php-dictionary.svg?branch=master)](https://travis-ci.org/arodygin/php-dictionary)
 
 # Static dictionary implementation for PHP
 
