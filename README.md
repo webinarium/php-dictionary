@@ -15,3 +15,9 @@ The recommended way to install is via Composer:
 composer.phar require "arodygin/php-dictionary"
 composer.phar install
 ```
+
+## Development
+
+```bash
+./bin/phpunit --coverage-text
+```
