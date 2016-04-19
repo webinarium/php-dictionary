@@ -1,6 +1,8 @@
 [![License](https://poser.pugx.org/arodygin/php-dictionary/license)](https://packagist.org/packages/arodygin/php-dictionary)
 [![Latest Stable Version](https://poser.pugx.org/arodygin/php-dictionary/v/stable)](https://packagist.org/packages/arodygin/php-dictionary)
 [![Build Status](https://travis-ci.org/arodygin/php-dictionary.svg?branch=master)](https://travis-ci.org/arodygin/php-dictionary)
+[![Code Coverage](https://scrutinizer-ci.com/g/arodygin/php-dictionary/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/arodygin/php-dictionary/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/arodygin/php-dictionary/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/arodygin/php-dictionary/?branch=master)
 
 # Static dictionary implementation for PHP
 
