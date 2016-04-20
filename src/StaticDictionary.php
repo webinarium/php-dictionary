@@ -42,7 +42,12 @@ abstract class StaticDictionary implements StaticDictionaryInterface
     {
         $dictionary = static::getFromCache();
 
-        return array_key_exists($key, $dictionary) ? $dictionary[$key] : null;
+        if (array_key_exists($key, $dictionary)) {
+            return $dictionary[$key];
+        }
+        else {
+            return static::FALLBACK === null ? null : $dictionary[static::FALLBACK];
+        }
     }
 
     /**

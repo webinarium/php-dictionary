@@ -22,6 +22,7 @@ composer.phar install
 ## Usage
 
 To create custom dictionary you have to extend `StaticDictionary` class and implement the `all` function, which must return your dictionary as associated array.
+After that you can use [`StaticDictionaryInterface`](https://github.com/arodygin/php-dictionary/blob/master/src/StaticDictionaryInterface.php) interface to work with your dictionary.
 
 Example dictionary:
 
@@ -100,6 +101,45 @@ class ColorType extends AbstractType
         ]);
     }
 }
+```
+
+Please note, if you try to get a value from your dictionary using non-existing key, you will get `NULL` without any failures or warnings.
+Sometimes it's useful to have a default fallback value to be returned instead of `NULL`.
+This can be done by defining a `FALLBACK` constant in your dictionary class:
+
+```php
+class Shell extends StaticDictionary
+{
+    const XFCE  = 1;
+    const KDE   = 2;
+    const GNOME = 3;
+    const LXDE  = 4;
+    const UNITY = 5;
+    const MATE  = 6;
+
+    const FALLBACK = self::UNITY;
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function all()
+    {
+        return [
+            self::UNITY => 'Unity',
+            self::GNOME => 'Gnome',
+            self::KDE   => 'KDE',
+            self::LXDE  => 'LXDE',
+            self::XFCE  => 'Xfce',
+            self::MATE  => 'MATE',
+        ];
+    }
+}
+
+// This returns 'Gnome'
+Shell::get(Shell::GNOME);
+
+// This returns 'Unity'
+Shell::get(Color::BLACK);
 ```
 
 ## Development

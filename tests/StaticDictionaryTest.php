@@ -12,66 +12,67 @@
 namespace Tests\Dictionary;
 
 require_once __DIR__ . '/Color.php';
+require_once __DIR__ . '/Shell.php';
 
 class StaticDictionaryTest extends \PHPUnit_Framework_TestCase
 {
     public function testAll()
     {
         $expected = [
-            Color::BLACK   => '#000000',
-            Color::BLUE    => '#0000FF',
-            Color::GREEN   => '#00FF00',
-            Color::CYAN    => '#00FFFF',
-            Color::RED     => '#FF0000',
-            Color::MAGENTA => '#FF00FF',
-            Color::YELLOW  => '#FFFF00',
-            Color::WHITE   => '#FFFFFF',
+            Shell::UNITY => 'Unity',
+            Shell::GNOME => 'Gnome',
+            Shell::KDE   => 'KDE',
+            Shell::LXDE  => 'LXDE',
+            Shell::XFCE  => 'Xfce',
+            Shell::MATE  => 'MATE',
         ];
 
-        self::assertEquals($expected, Color::all());
+        self::assertEquals($expected, Shell::all());
+    }
+
+    public function testFallback()
+    {
+        self::assertNull(Color::FALLBACK);
+        self::assertNotNull(Shell::FALLBACK);
     }
 
     public function testGet()
     {
-        self::assertEquals('#0000FF', Color::get(Color::BLUE));
-        self::assertNull(Color::get('Unknown'));
+        self::assertEquals('Gnome', Shell::get(Shell::GNOME));
+        self::assertEquals('Unity', Shell::get(Color::BLACK));
     }
 
     public function testHas()
     {
-        self::assertTrue(Color::has(Color::BLUE));
-        self::assertFalse(Color::has('Unknown'));
+        self::assertTrue(Shell::has(Shell::GNOME));
+        self::assertFalse(Shell::has(Color::BLACK));
     }
 
     public function testKeys()
     {
         $expected = [
-            Color::BLACK,
-            Color::BLUE,
-            Color::GREEN,
-            Color::CYAN,
-            Color::RED,
-            Color::MAGENTA,
-            Color::YELLOW,
-            Color::WHITE,
+            Shell::UNITY,
+            Shell::GNOME,
+            Shell::KDE,
+            Shell::LXDE,
+            Shell::XFCE,
+            Shell::MATE,
         ];
 
-        self::assertEquals($expected, Color::keys());
+        self::assertEquals($expected, Shell::keys());
     }
 
     public function testValues()
     {
         $expected = [
-            '#000000',
-            '#0000FF',
-            '#00FF00',
-            '#00FFFF',
-            '#FF0000',
-            '#FF00FF',
-            '#FFFF00',
-            '#FFFFFF',
+            'Unity',
+            'Gnome',
+            'KDE',
+            'LXDE',
+            'Xfce',
+            'MATE',
         ];
 
-        self::assertEquals($expected, Color::values());
+        self::assertEquals($expected, Shell::values());
     }
 }

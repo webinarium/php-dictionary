@@ -16,6 +16,9 @@ namespace Dictionary;
  */
 interface StaticDictionaryInterface
 {
+    // Fallback key of the default value to return on non-existing keys.
+    const FALLBACK = null;
+
     /**
      * Returns whole dictionary as associated array.
      *
@@ -25,7 +28,9 @@ interface StaticDictionaryInterface
 
     /**
      * Returns value by specified key.
-     * If the key doesn't exist, returns NULL.
+     *
+     * If the key doesn't exist, returns fallback value using 'FALLBACK' constant as the key;
+     * if 'FALLBACK' constant is not defined, returns NULL.
      *
      * @param   mixed $key
      *
