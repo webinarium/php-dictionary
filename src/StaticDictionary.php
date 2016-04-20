@@ -63,6 +63,18 @@ abstract class StaticDictionary implements StaticDictionaryInterface
     /**
      * {@inheritdoc}
      */
+    public static function find($value)
+    {
+        $dictionary = static::getFromCache();
+
+        $key = array_search($value, $dictionary);
+
+        return $key === false ? static::FALLBACK : $key;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public static function keys()
     {
         $dictionary = static::getFromCache();

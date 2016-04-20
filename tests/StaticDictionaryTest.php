@@ -48,6 +48,16 @@ class StaticDictionaryTest extends \PHPUnit_Framework_TestCase
         self::assertFalse(Shell::has(Color::BLACK));
     }
 
+    public function testFind()
+    {
+        self::assertEquals(Shell::GNOME, Shell::find('Gnome'));
+        self::assertEquals(Shell::UNITY, Shell::find('Cinnamon'));
+
+        self::assertNull(Color::find(Shell::GNOME));
+        self::assertEquals(Color::GREY, Color::find('#808080'));
+        self::assertNotEquals(Color::GRAY, Color::find('#808080'));
+    }
+
     public function testKeys()
     {
         $expected = [

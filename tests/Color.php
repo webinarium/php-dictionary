@@ -25,6 +25,8 @@ class Color extends StaticDictionary
     const MAGENTA = 'Magenta';
     const YELLOW  = 'Yellow';
     const WHITE   = 'White';
+    const GREY    = 'Grey';
+    const GRAY    = 'Gray';
 
     /**
      * {@inheritdoc}
@@ -40,6 +42,8 @@ class Color extends StaticDictionary
             self::MAGENTA => '#FF00FF',
             self::YELLOW  => '#FFFF00',
             self::WHITE   => '#FFFFFF',
+            self::GREY    => '#808080',
+            self::GRAY    => '#808080',
         ];
     }
 }

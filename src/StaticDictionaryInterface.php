@@ -48,6 +48,18 @@ interface StaticDictionaryInterface
     public static function has($key);
 
     /**
+     * Finds key by specified value.
+     *
+     * If the value doesn't exist, returns 'FALLBACK' constant; if 'FALLBACK' constant is not defined, returns NULL.
+     * When dictionary contains several values, the key of the first found value is returned.
+     *
+     * @param   mixed $value
+     *
+     * @return  mixed
+     */
+    public static function find($value);
+
+    /**
      * Returns all keys of the dictionary.
      *
      * @return  array
