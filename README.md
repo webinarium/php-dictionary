@@ -78,7 +78,7 @@ class Settings
 {
     /**
      * @Constraints\NotNull()
-     * @Constraints\Choice(callback = {"Dictionary\Color", "all"})
+     * @Constraints\Choice(callback = {"Dictionary\Color", "keys"})
      */
     public $color;
 }
