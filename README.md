@@ -110,14 +110,14 @@ This can be done by defining a `FALLBACK` constant in your dictionary class:
 ```php
 class Shell extends StaticDictionary
 {
+    const FALLBACK = self::UNITY;
+
     const XFCE  = 1;
     const KDE   = 2;
     const GNOME = 3;
     const LXDE  = 4;
     const UNITY = 5;
     const MATE  = 6;
-
-    const FALLBACK = self::UNITY;
 
     /**
      * {@inheritdoc}
