@@ -6,7 +6,7 @@
     "homepage": "https://github.com/arodygin/php-dictionary",
     "license": "MIT",
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.4"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.1",
