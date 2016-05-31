@@ -145,6 +145,6 @@ Shell::get(Color::BLACK);
 ## Development
 
 ```bash
+phpunit --coverage-text
 ./bin/php-cs-fixer fix
-./bin/phpunit --coverage-text
 ```
