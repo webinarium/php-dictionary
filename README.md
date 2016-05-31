@@ -15,8 +15,8 @@ PHP needs to be a minimum version of PHP 5.4.
 The recommended way to install is via Composer:
 
 ```bash
-composer.phar require "arodygin/php-dictionary"
-composer.phar install
+composer require "arodygin/php-dictionary"
+composer install
 ```
 
 ## Usage
