@@ -16,7 +16,6 @@ The recommended way to install is via Composer:
 
 ```bash
 composer require "arodygin/php-dictionary"
-composer install
 ```
 
 ## Usage
