@@ -1,4 +1,5 @@
 [![License](https://poser.pugx.org/arodygin/php-dictionary/license)](https://packagist.org/packages/arodygin/php-dictionary)
+[![PHP](https://img.shields.io/badge/PHP-5.4%2B-blue.svg)](https://secure.php.net/migration54)
 [![Latest Stable Version](https://poser.pugx.org/arodygin/php-dictionary/v/stable)](https://packagist.org/packages/arodygin/php-dictionary)
 [![Build Status](https://travis-ci.org/arodygin/php-dictionary.svg?branch=master)](https://travis-ci.org/arodygin/php-dictionary)
 [![Code Coverage](https://scrutinizer-ci.com/g/arodygin/php-dictionary/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/arodygin/php-dictionary/?branch=master)
