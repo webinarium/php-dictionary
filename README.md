@@ -130,6 +130,20 @@ Shell::get(Shell::GNOME);
 Shell::get(Color::BLACK);
 ```
 
+If your dictionary should be built in run-time, you may skip the `$dictionary` static array and overload `dictionary()` static function instead of that:
+
+```php
+class Timezone extends StaticDictionary
+{
+    const FALLBACK = 'UTC';
+
+    protected static function dictionary()
+    {
+        return timezone_identifiers_list();
+    }
+}
+```
+
 ## Development
 
 ```bash

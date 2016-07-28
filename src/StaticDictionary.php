@@ -20,9 +20,11 @@ abstract class StaticDictionary implements StaticDictionaryInterface
     protected static $dictionary = [];
 
     /**
-     * {@inheritdoc}
+     * Returns dictionary.
+     *
+     * @return  array
      */
-    public static function all()
+    protected static function dictionary()
     {
         return static::$dictionary;
     }
@@ -30,13 +32,23 @@ abstract class StaticDictionary implements StaticDictionaryInterface
     /**
      * {@inheritdoc}
      */
+    public static function all()
+    {
+        return static::dictionary();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public static function get($key)
     {
-        if (array_key_exists($key, static::$dictionary)) {
-            return static::$dictionary[$key];
+        $dictionary = static::dictionary();
+
+        if (array_key_exists($key, $dictionary)) {
+            return $dictionary[$key];
         }
         else {
-            return static::FALLBACK === null ? null : static::$dictionary[static::FALLBACK];
+            return static::FALLBACK === null ? null : $dictionary[static::FALLBACK];
         }
     }
 
@@ -45,7 +57,7 @@ abstract class StaticDictionary implements StaticDictionaryInterface
      */
     public static function has($key)
     {
-        return array_key_exists($key, static::$dictionary);
+        return array_key_exists($key, static::dictionary());
     }
 
     /**
@@ -53,7 +65,7 @@ abstract class StaticDictionary implements StaticDictionaryInterface
      */
     public static function find($value)
     {
-        $key = array_search($value, static::$dictionary);
+        $key = array_search($value, static::dictionary());
 
         return $key === false ? static::FALLBACK : $key;
     }
@@ -63,7 +75,7 @@ abstract class StaticDictionary implements StaticDictionaryInterface
      */
     public static function keys()
     {
-        return array_keys(static::$dictionary);
+        return array_keys(static::dictionary());
     }
 
     /**
@@ -71,6 +83,6 @@ abstract class StaticDictionary implements StaticDictionaryInterface
      */
     public static function values()
     {
-        return array_values(static::$dictionary);
+        return array_values(static::dictionary());
     }
 }
