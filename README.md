@@ -21,8 +21,8 @@ composer require "arodygin/php-dictionary"
 
 ## Usage
 
-To create custom dictionary you have to extend `StaticDictionary` class and implement the `all` function, which must return your dictionary as associated array.
-After that you can use [`StaticDictionaryInterface`](https://github.com/arodygin/php-dictionary/blob/master/src/StaticDictionaryInterface.php) interface to work with your dictionary.
+To create custom dictionary you have to extend `StaticDictionary` class and override the `$dictionary` static array.
+After that you can use [`StaticDictionaryInterface`](https://github.com/arodygin/php-dictionary/blob/master/src/StaticDictionaryInterface.php) to work with your dictionary.
 
 Example dictionary:
 
@@ -40,22 +40,16 @@ class Color extends StaticDictionary
     const YELLOW  = 'Yellow';
     const WHITE   = 'White';
 
-    /**
-     * {@inheritdoc}
-     */
-    public static function all()
-    {
-        return [
-            self::BLACK   => '#000000',
-            self::BLUE    => '#0000FF',
-            self::GREEN   => '#00FF00',
-            self::CYAN    => '#00FFFF',
-            self::RED     => '#FF0000',
-            self::MAGENTA => '#FF00FF',
-            self::YELLOW  => '#FFFF00',
-            self::WHITE   => '#FFFFFF',
-        ];
-    }
+    protected static $dictionary = [
+        self::BLACK   => '#000000',
+        self::BLUE    => '#0000FF',
+        self::GREEN   => '#00FF00',
+        self::CYAN    => '#00FFFF',
+        self::RED     => '#FF0000',
+        self::MAGENTA => '#FF00FF',
+        self::YELLOW  => '#FFFF00',
+        self::WHITE   => '#FFFFFF',
+    ];
 }
 ```
 
@@ -119,20 +113,14 @@ class Shell extends StaticDictionary
     const UNITY = 5;
     const MATE  = 6;
 
-    /**
-     * {@inheritdoc}
-     */
-    public static function all()
-    {
-        return [
-            self::UNITY => 'Unity',
-            self::GNOME => 'Gnome',
-            self::KDE   => 'KDE',
-            self::LXDE  => 'LXDE',
-            self::XFCE  => 'Xfce',
-            self::MATE  => 'MATE',
-        ];
-    }
+    protected static $dictionary = [
+        self::UNITY => 'Unity',
+        self::GNOME => 'Gnome',
+        self::KDE   => 'KDE',
+        self::LXDE  => 'LXDE',
+        self::XFCE  => 'Xfce',
+        self::MATE  => 'MATE',
+    ];
 }
 
 // This returns 'Gnome'

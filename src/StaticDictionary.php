@@ -16,23 +16,15 @@ namespace Dictionary;
  */
 abstract class StaticDictionary implements StaticDictionaryInterface
 {
-    /** @var array Shared cache of all dictionaries. */
-    private static $cache = [];
+    /** @var array Dictionary values (to be overloaded). */
+    protected static $dictionary = [];
 
     /**
-     * Returns the dictionary as associated array.
-     *
-     * @return  array
+     * {@inheritdoc}
      */
-    private static function getFromCache()
+    public static function all()
     {
-        $dictionary = get_called_class();
-
-        if (!array_key_exists($dictionary, self::$cache)) {
-            self::$cache[$dictionary] = static::all();
-        }
-
-        return self::$cache[$dictionary];
+        return static::$dictionary;
     }
 
     /**
@@ -40,13 +32,11 @@ abstract class StaticDictionary implements StaticDictionaryInterface
      */
     public static function get($key)
     {
-        $dictionary = static::getFromCache();
-
-        if (array_key_exists($key, $dictionary)) {
-            return $dictionary[$key];
+        if (array_key_exists($key, static::$dictionary)) {
+            return static::$dictionary[$key];
         }
         else {
-            return static::FALLBACK === null ? null : $dictionary[static::FALLBACK];
+            return static::FALLBACK === null ? null : static::$dictionary[static::FALLBACK];
         }
     }
 
@@ -55,9 +45,7 @@ abstract class StaticDictionary implements StaticDictionaryInterface
      */
     public static function has($key)
     {
-        $dictionary = static::getFromCache();
-
-        return array_key_exists($key, $dictionary);
+        return array_key_exists($key, static::$dictionary);
     }
 
     /**
@@ -65,9 +53,7 @@ abstract class StaticDictionary implements StaticDictionaryInterface
      */
     public static function find($value)
     {
-        $dictionary = static::getFromCache();
-
-        $key = array_search($value, $dictionary);
+        $key = array_search($value, static::$dictionary);
 
         return $key === false ? static::FALLBACK : $key;
     }
@@ -77,9 +63,7 @@ abstract class StaticDictionary implements StaticDictionaryInterface
      */
     public static function keys()
     {
-        $dictionary = static::getFromCache();
-
-        return array_keys($dictionary);
+        return array_keys(static::$dictionary);
     }
 
     /**
@@ -87,8 +71,6 @@ abstract class StaticDictionary implements StaticDictionaryInterface
      */
     public static function values()
     {
-        $dictionary = static::getFromCache();
-
-        return array_values($dictionary);
+        return array_values(static::$dictionary);
     }
 }

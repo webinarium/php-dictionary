@@ -24,18 +24,12 @@ class Shell extends StaticDictionary
     const UNITY = 5;
     const MATE  = 6;
 
-    /**
-     * {@inheritdoc}
-     */
-    public static function all()
-    {
-        return [
-            self::UNITY => 'Unity',
-            self::GNOME => 'Gnome',
-            self::KDE   => 'KDE',
-            self::LXDE  => 'LXDE',
-            self::XFCE  => 'Xfce',
-            self::MATE  => 'MATE',
-        ];
-    }
+    protected static $dictionary = [
+        self::UNITY => 'Unity',
+        self::GNOME => 'Gnome',
+        self::KDE   => 'KDE',
+        self::LXDE  => 'LXDE',
+        self::XFCE  => 'Xfce',
+        self::MATE  => 'MATE',
+    ];
 }

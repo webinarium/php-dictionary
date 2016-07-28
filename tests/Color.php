@@ -26,22 +26,16 @@ class Color extends StaticDictionary
     const GREY    = 'Grey';
     const GRAY    = 'Gray';
 
-    /**
-     * {@inheritdoc}
-     */
-    public static function all()
-    {
-        return [
-            self::BLACK   => '#000000',
-            self::BLUE    => '#0000FF',
-            self::GREEN   => '#00FF00',
-            self::CYAN    => '#00FFFF',
-            self::RED     => '#FF0000',
-            self::MAGENTA => '#FF00FF',
-            self::YELLOW  => '#FFFF00',
-            self::WHITE   => '#FFFFFF',
-            self::GREY    => '#808080',
-            self::GRAY    => '#808080',
-        ];
-    }
+    protected static $dictionary = [
+        self::BLACK   => '#000000',
+        self::BLUE    => '#0000FF',
+        self::GREEN   => '#00FF00',
+        self::CYAN    => '#00FFFF',
+        self::RED     => '#FF0000',
+        self::MAGENTA => '#FF00FF',
+        self::YELLOW  => '#FFFF00',
+        self::WHITE   => '#FFFFFF',
+        self::GREY    => '#808080',
+        self::GRAY    => '#808080',
+    ];
 }
