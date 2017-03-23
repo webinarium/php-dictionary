@@ -20,16 +20,6 @@ abstract class StaticDictionary implements StaticDictionaryInterface
     protected static $dictionary = [];
 
     /**
-     * Returns dictionary.
-     *
-     * @return  array
-     */
-    protected static function dictionary()
-    {
-        return static::$dictionary;
-    }
-
-    /**
      * {@inheritdoc}
      */
     public static function all()
@@ -47,9 +37,9 @@ abstract class StaticDictionary implements StaticDictionaryInterface
         if (array_key_exists($key, $dictionary)) {
             return $dictionary[$key];
         }
-        else {
-            return static::FALLBACK === null ? null : $dictionary[static::FALLBACK];
-        }
+
+        return static::FALLBACK === null ? null : $dictionary[static::FALLBACK];
+
     }
 
     /**
@@ -65,7 +55,7 @@ abstract class StaticDictionary implements StaticDictionaryInterface
      */
     public static function find($value)
     {
-        $key = array_search($value, static::dictionary());
+        $key = array_search($value, static::dictionary(), true);
 
         return $key === false ? static::FALLBACK : $key;
     }
@@ -84,5 +74,15 @@ abstract class StaticDictionary implements StaticDictionaryInterface
     public static function values()
     {
         return array_values(static::dictionary());
+    }
+
+    /**
+     * Returns dictionary.
+     *
+     * @return  array
+     */
+    protected static function dictionary()
+    {
+        return static::$dictionary;
     }
 }
