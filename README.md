@@ -1,5 +1,5 @@
 [![License](https://poser.pugx.org/webinarium/php-dictionary/license)](https://packagist.org/packages/webinarium/php-dictionary)
-[![PHP](https://img.shields.io/badge/PHP-5.4%2B-blue.svg)](https://secure.php.net/migration54)
+[![PHP](https://img.shields.io/badge/PHP-5.6%2B-blue.svg)](https://secure.php.net/migration56)
 [![Latest Stable Version](https://poser.pugx.org/webinarium/php-dictionary/v/stable)](https://packagist.org/packages/webinarium/php-dictionary)
 [![Build Status](https://travis-ci.org/webinarium/php-dictionary.svg?branch=master)](https://travis-ci.org/webinarium/php-dictionary)
 [![Code Coverage](https://scrutinizer-ci.com/g/webinarium/php-dictionary/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/webinarium/php-dictionary/?branch=master)
@@ -148,5 +148,5 @@ class Timezone extends StaticDictionary
 
 ```bash
 ./bin/php-cs-fixer fix
-phpunit --coverage-text
+./bin/phpunit --coverage-text
 ```
