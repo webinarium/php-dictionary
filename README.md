@@ -1,9 +1,9 @@
-[![License](https://poser.pugx.org/arodygin/php-dictionary/license)](https://packagist.org/packages/arodygin/php-dictionary)
+[![License](https://poser.pugx.org/webinarium/php-dictionary/license)](https://packagist.org/packages/webinarium/php-dictionary)
 [![PHP](https://img.shields.io/badge/PHP-5.4%2B-blue.svg)](https://secure.php.net/migration54)
-[![Latest Stable Version](https://poser.pugx.org/arodygin/php-dictionary/v/stable)](https://packagist.org/packages/arodygin/php-dictionary)
-[![Build Status](https://travis-ci.org/arodygin/php-dictionary.svg?branch=master)](https://travis-ci.org/arodygin/php-dictionary)
-[![Code Coverage](https://scrutinizer-ci.com/g/arodygin/php-dictionary/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/arodygin/php-dictionary/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/arodygin/php-dictionary/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/arodygin/php-dictionary/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/webinarium/php-dictionary/v/stable)](https://packagist.org/packages/webinarium/php-dictionary)
+[![Build Status](https://travis-ci.org/webinarium/php-dictionary.svg?branch=master)](https://travis-ci.org/webinarium/php-dictionary)
+[![Code Coverage](https://scrutinizer-ci.com/g/webinarium/php-dictionary/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/webinarium/php-dictionary/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webinarium/php-dictionary/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/webinarium/php-dictionary/?branch=master)
 
 # Static dictionary implementation for PHP
 
@@ -16,13 +16,13 @@ PHP needs to be a minimum version of PHP 5.4.
 The recommended way to install is via Composer:
 
 ```bash
-composer require "arodygin/php-dictionary"
+composer require "webinarium/php-dictionary"
 ```
 
 ## Usage
 
 To create custom dictionary you have to extend `StaticDictionary` class and override the `$dictionary` static array.
-After that you can use [`StaticDictionaryInterface`](https://github.com/arodygin/php-dictionary/blob/master/src/StaticDictionaryInterface.php) to work with your dictionary.
+After that you can use [`StaticDictionaryInterface`](https://github.com/webinarium/php-dictionary/blob/master/src/StaticDictionaryInterface.php) to work with your dictionary.
 
 Example dictionary:
 
@@ -147,6 +147,6 @@ class Timezone extends StaticDictionary
 ## Development
 
 ```bash
-phpunit --coverage-text
 ./bin/php-cs-fixer fix
+phpunit --coverage-text
 ```

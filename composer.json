@@ -1,9 +1,9 @@
 {
-    "name": "arodygin/php-dictionary",
+    "name": "webinarium/php-dictionary",
     "description": "Static dictionary implementation for PHP",
     "type": "library",
     "keywords": ["dictionary"],
-    "homepage": "https://github.com/arodygin/php-dictionary",
+    "homepage": "https://github.com/webinarium/php-dictionary",
     "license": "MIT",
     "require": {
         "php": ">=5.4"
