@@ -79,7 +79,7 @@ abstract class StaticDictionary implements StaticDictionaryInterface
     /**
      * Returns dictionary.
      *
-     * @return  array
+     * @return array
      */
     protected static function dictionary()
     {

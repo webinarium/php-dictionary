@@ -22,7 +22,7 @@ interface StaticDictionaryInterface
     /**
      * Returns whole dictionary as associated array.
      *
-     * @return  array
+     * @return array
      */
     public static function all();
 
@@ -32,18 +32,18 @@ interface StaticDictionaryInterface
      * If the key doesn't exist, returns fallback value using 'FALLBACK' constant as the key;
      * if 'FALLBACK' constant is not defined, returns NULL.
      *
-     * @param   mixed $key
+     * @param mixed $key
      *
-     * @return  mixed
+     * @return mixed
      */
     public static function get($key);
 
     /**
      * Checks whether the dictionary contains specified key.
      *
-     * @param   mixed $key
+     * @param mixed $key
      *
-     * @return  bool
+     * @return bool
      */
     public static function has($key);
 
@@ -53,23 +53,23 @@ interface StaticDictionaryInterface
      * If the value doesn't exist, returns 'FALLBACK' constant; if 'FALLBACK' constant is not defined, returns NULL.
      * When dictionary contains several values, the key of the first found value is returned.
      *
-     * @param   mixed $value
+     * @param mixed $value
      *
-     * @return  mixed
+     * @return mixed
      */
     public static function find($value);
 
     /**
      * Returns all keys of the dictionary.
      *
-     * @return  array
+     * @return array
      */
     public static function keys();
 
     /**
      * Returns all values of the dictionary.
      *
-     * @return  array
+     * @return array
      */
     public static function values();
 }
