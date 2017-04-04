@@ -1,4 +1,3 @@
-[![License](https://poser.pugx.org/webinarium/php-dictionary/license)](https://packagist.org/packages/webinarium/php-dictionary)
 [![PHP](https://img.shields.io/badge/PHP-5.6%2B-blue.svg)](https://secure.php.net/migration56)
 [![Latest Stable Version](https://poser.pugx.org/webinarium/php-dictionary/v/stable)](https://packagist.org/packages/webinarium/php-dictionary)
 [![Build Status](https://travis-ci.org/webinarium/php-dictionary.svg?branch=master)](https://travis-ci.org/webinarium/php-dictionary)
