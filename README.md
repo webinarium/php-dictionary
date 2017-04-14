@@ -8,14 +8,14 @@
 
 ## Requirements
 
-PHP needs to be a minimum version of PHP 5.4.
+PHP needs to be a minimum version of PHP 5.6.
 
 ## Installation
 
 The recommended way to install is via Composer:
 
 ```bash
-composer require "webinarium/php-dictionary"
+composer require webinarium/php-dictionary
 ```
 
 ## Usage
