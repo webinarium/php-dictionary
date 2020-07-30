@@ -2,7 +2,7 @@
 
 //----------------------------------------------------------------------
 //
-//  Copyright (C) 2015 Artem Rodygin
+//  Copyright (C) 2015-2020 Artem Rodygin
 //
 //  You should have received a copy of the MIT License along with
 //  this file. If not, see <http://opensource.org/licenses/MIT>.
@@ -17,14 +17,14 @@ namespace Dictionary;
 interface StaticDictionaryInterface
 {
     // Fallback key of the default value to return on non-existing keys.
-    const FALLBACK = null;
+    public const FALLBACK = null;
 
     /**
      * Returns whole dictionary as associated array.
      *
      * @return array
      */
-    public static function all();
+    public static function all(): array;
 
     /**
      * Returns value by specified key.
@@ -45,7 +45,7 @@ interface StaticDictionaryInterface
      *
      * @return bool
      */
-    public static function has($key);
+    public static function has($key): bool;
 
     /**
      * Finds key by specified value.
@@ -64,12 +64,12 @@ interface StaticDictionaryInterface
      *
      * @return array
      */
-    public static function keys();
+    public static function keys(): array;
 
     /**
      * Returns all values of the dictionary.
      *
      * @return array
      */
-    public static function values();
+    public static function values(): array;
 }

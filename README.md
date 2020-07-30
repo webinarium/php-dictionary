@@ -1,4 +1,4 @@
-[![PHP](https://img.shields.io/badge/PHP-5.6%2B-blue.svg)](https://secure.php.net/migration56)
+[![PHP](https://img.shields.io/badge/PHP-7.4%2B-blue.svg)](https://secure.php.net/migration74)
 [![Latest Stable Version](https://poser.pugx.org/webinarium/php-dictionary/v/stable)](https://packagist.org/packages/webinarium/php-dictionary)
 [![Build Status](https://travis-ci.org/webinarium/php-dictionary.svg?branch=master)](https://travis-ci.org/webinarium/php-dictionary)
 [![Code Coverage](https://scrutinizer-ci.com/g/webinarium/php-dictionary/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/webinarium/php-dictionary/?branch=master)
@@ -8,7 +8,7 @@
 
 ## Requirements
 
-PHP needs to be a minimum version of PHP 5.6.
+PHP needs to be a minimum version of PHP 7.4.
 
 ## Installation
 
@@ -30,16 +30,16 @@ namespace Dictionary;
 
 class Color extends StaticDictionary
 {
-    const BLACK   = 'Black';
-    const BLUE    = 'Blue';
-    const GREEN   = 'Green';
-    const CYAN    = 'Cyan';
-    const RED     = 'Red';
-    const MAGENTA = 'Magenta';
-    const YELLOW  = 'Yellow';
-    const WHITE   = 'White';
+    public const BLACK   = 'Black';
+    public const BLUE    = 'Blue';
+    public const GREEN   = 'Green';
+    public const CYAN    = 'Cyan';
+    public const RED     = 'Red';
+    public const MAGENTA = 'Magenta';
+    public const YELLOW  = 'Yellow';
+    public const WHITE   = 'White';
 
-    protected static $dictionary = [
+    protected static array $dictionary = [
         self::BLACK   => '#000000',
         self::BLUE    => '#0000FF',
         self::GREEN   => '#00FF00',
@@ -103,16 +103,16 @@ This can be done by defining a `FALLBACK` constant in your dictionary class:
 ```php
 class Shell extends StaticDictionary
 {
-    const FALLBACK = self::UNITY;
+    public const FALLBACK = self::UNITY;
 
-    const XFCE  = 1;
-    const KDE   = 2;
-    const GNOME = 3;
-    const LXDE  = 4;
-    const UNITY = 5;
-    const MATE  = 6;
+    public const XFCE  = 1;
+    public const KDE   = 2;
+    public const GNOME = 3;
+    public const LXDE  = 4;
+    public const UNITY = 5;
+    public const MATE  = 6;
 
-    protected static $dictionary = [
+    protected static array $dictionary = [
         self::UNITY => 'Unity',
         self::GNOME => 'Gnome',
         self::KDE   => 'KDE',
@@ -136,7 +136,7 @@ class Timezone extends StaticDictionary
 {
     const FALLBACK = 'UTC';
 
-    protected static function dictionary()
+    protected static function dictionary(): array
     {
         return timezone_identifiers_list();
     }

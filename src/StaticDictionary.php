@@ -2,7 +2,7 @@
 
 //----------------------------------------------------------------------
 //
-//  Copyright (C) 2015 Artem Rodygin
+//  Copyright (C) 2015-2020 Artem Rodygin
 //
 //  You should have received a copy of the MIT License along with
 //  this file. If not, see <http://opensource.org/licenses/MIT>.
@@ -17,12 +17,12 @@ namespace Dictionary;
 abstract class StaticDictionary implements StaticDictionaryInterface
 {
     /** @var array Dictionary values (to be overloaded). */
-    protected static $dictionary = [];
+    protected static array $dictionary = [];
 
     /**
      * {@inheritdoc}
      */
-    public static function all()
+    public static function all(): array
     {
         return static::dictionary();
     }
@@ -45,7 +45,7 @@ abstract class StaticDictionary implements StaticDictionaryInterface
     /**
      * {@inheritdoc}
      */
-    public static function has($key)
+    public static function has($key): bool
     {
         return array_key_exists($key, static::dictionary());
     }
@@ -63,7 +63,7 @@ abstract class StaticDictionary implements StaticDictionaryInterface
     /**
      * {@inheritdoc}
      */
-    public static function keys()
+    public static function keys(): array
     {
         return array_keys(static::dictionary());
     }
@@ -71,7 +71,7 @@ abstract class StaticDictionary implements StaticDictionaryInterface
     /**
      * {@inheritdoc}
      */
-    public static function values()
+    public static function values(): array
     {
         return array_values(static::dictionary());
     }
@@ -81,7 +81,7 @@ abstract class StaticDictionary implements StaticDictionaryInterface
      *
      * @return array
      */
-    protected static function dictionary()
+    protected static function dictionary(): array
     {
         return static::$dictionary;
     }

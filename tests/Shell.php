@@ -2,7 +2,7 @@
 
 //----------------------------------------------------------------------
 //
-//  Copyright (C) 2015 Artem Rodygin
+//  Copyright (C) 2015-2020 Artem Rodygin
 //
 //  You should have received a copy of the MIT License along with
 //  this file. If not, see <http://opensource.org/licenses/MIT>.
@@ -15,16 +15,16 @@ use Dictionary\StaticDictionary;
 
 class Shell extends StaticDictionary
 {
-    const FALLBACK = self::UNITY;
+    public const FALLBACK = self::UNITY;
 
-    const XFCE  = 1;
-    const KDE   = 2;
-    const GNOME = 3;
-    const LXDE  = 4;
-    const UNITY = 5;
-    const MATE  = 6;
+    public const XFCE  = 1;
+    public const KDE   = 2;
+    public const GNOME = 3;
+    public const LXDE  = 4;
+    public const UNITY = 5;
+    public const MATE  = 6;
 
-    protected static $dictionary = [
+    protected static array $dictionary = [
         self::UNITY => 'Unity',
         self::GNOME => 'Gnome',
         self::KDE   => 'KDE',

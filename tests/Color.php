@@ -2,7 +2,7 @@
 
 //----------------------------------------------------------------------
 //
-//  Copyright (C) 2015 Artem Rodygin
+//  Copyright (C) 2015-2020 Artem Rodygin
 //
 //  You should have received a copy of the MIT License along with
 //  this file. If not, see <http://opensource.org/licenses/MIT>.
@@ -15,18 +15,18 @@ use Dictionary\StaticDictionary;
 
 class Color extends StaticDictionary
 {
-    const BLACK   = 'Black';
-    const BLUE    = 'Blue';
-    const GREEN   = 'Green';
-    const CYAN    = 'Cyan';
-    const RED     = 'Red';
-    const MAGENTA = 'Magenta';
-    const YELLOW  = 'Yellow';
-    const WHITE   = 'White';
-    const GREY    = 'Grey';
-    const GRAY    = 'Gray';
+    public const BLACK   = 'Black';
+    public const BLUE    = 'Blue';
+    public const GREEN   = 'Green';
+    public const CYAN    = 'Cyan';
+    public const RED     = 'Red';
+    public const MAGENTA = 'Magenta';
+    public const YELLOW  = 'Yellow';
+    public const WHITE   = 'White';
+    public const GREY    = 'Grey';
+    public const GRAY    = 'Gray';
 
-    protected static $dictionary = [
+    protected static array $dictionary = [
         self::BLACK   => '#000000',
         self::BLUE    => '#0000FF',
         self::GREEN   => '#00FF00',
