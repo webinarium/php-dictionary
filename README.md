@@ -1,6 +1,6 @@
 [![PHP](https://img.shields.io/badge/PHP-7.4%2B-blue.svg)](https://secure.php.net/migration74)
 [![Latest Stable Version](https://poser.pugx.org/webinarium/php-dictionary/v/stable)](https://packagist.org/packages/webinarium/php-dictionary)
-[![Build Status](https://travis-ci.org/webinarium/php-dictionary.svg?branch=master)](https://travis-ci.org/webinarium/php-dictionary)
+[![Build Status](https://travis-ci.com/webinarium/php-dictionary.svg?branch=master)](https://travis-ci.com/webinarium/php-dictionary)
 [![Code Coverage](https://scrutinizer-ci.com/g/webinarium/php-dictionary/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/webinarium/php-dictionary/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webinarium/php-dictionary/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/webinarium/php-dictionary/?branch=master)
 
