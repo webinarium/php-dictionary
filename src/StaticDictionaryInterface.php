@@ -2,7 +2,7 @@
 
 //----------------------------------------------------------------------
 //
-//  Copyright (C) 2015-2020 Artem Rodygin
+//  Copyright (C) 2015-2021 Artem Rodygin
 //
 //  You should have received a copy of the MIT License along with
 //  this file. If not, see <http://opensource.org/licenses/MIT>.
@@ -16,9 +16,6 @@ namespace Dictionary;
  */
 interface StaticDictionaryInterface
 {
-    // Fallback key of the default value to return on non-existing keys.
-    public const FALLBACK = null;
-
     /**
      * Returns whole dictionary as associated array.
      *

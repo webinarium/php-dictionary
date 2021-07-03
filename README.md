@@ -147,5 +147,5 @@ class Timezone extends StaticDictionary
 
 ```bash
 ./bin/php-cs-fixer fix
-./bin/phpunit --coverage-text
+XDEBUG_MODE=coverage ./bin/phpunit --coverage-text
 ```
